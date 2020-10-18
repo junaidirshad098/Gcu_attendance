@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Gcu_attendance</string>
+    <string name="content_description_media">Cardview 1</string>
+    <string name="teacher_name">Atif Ishaq</string>
+    <string name="Section">Section E1</string>
+    <string name="supporting_text">Programming involves activities such as analysis, developing understanding, generating algorithms...</string>
+    <string name="action_1">Action1</string>
+    <string name="action_2">Action2</string>
+    <string name="subject_name">Programming Fundamentals</string>
+</resources>

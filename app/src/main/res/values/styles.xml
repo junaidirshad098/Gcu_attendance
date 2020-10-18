@@ -1,0 +1,48 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="Theme.App" parent="Theme.MaterialComponents.NoActionBar">
+<item name="android:background">@color/colorPrimary</item>
+        <item name="colorPrimary">@android:color/holo_purple</item>
+        <item name="colorSurface">@color/colorPrimary</item>
+        <item name="colorOnSurface">@android:color/holo_red_light</item>
+        <item name="android:textColor">@android:color/white</item>
+
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.MaterialComponents.SmallComponent</item>
+    </style>
+
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">8dp</item>
+        <item name="cardElevation">20dp</item>
+    </style>
+    <style name="AppTheme.attendencetext">
+        <item name="android:textColor">@android:color/primary_text_dark</item>
+        <item name="buttonStyle">@style/buttonstyle</item>
+<item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="buttonstyle" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:background">@drawable/floating_btn_extended</item>
+        <item name="drawableTint">@color/colorPrimary</item>
+
+
+    </style>
+<style name="myactionbar" parent="Theme.Design.Light.NoActionBar">
+    <item name="actionBarTheme">@style/Theme.Design.NoActionBar</item>
+<item name="windowActionBar">false</item>
+
+    <item name="windowNoTitle">true</item>
+</style>
+
+</resources>

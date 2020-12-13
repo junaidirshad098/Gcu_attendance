@@ -18,7 +18,7 @@ private Button btnlogin;
             @Override
             public void onClick(View view) {
 
-                Intent intent=new Intent(Login_screen.this,MainActivity.class);
+                Intent intent=new Intent(Login_screen.this,navigation_drawer_activity.class);
                 startActivity(intent);
 
             }

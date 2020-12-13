@@ -11,6 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -24,7 +25,8 @@ public class Attendence_activity extends AppCompatActivity {
 private ListView list_atd_std;
 private CheckBox select_all_check;
 boolean mark=false;
-private Button btn_att_submit,btn_call;
+private Button btn_att_submit;
+ImageButton btn_call;
 private  int std_count_prsent,std_count_absent;
     private int mYear, mMonth, mDay, mHour, mMinute;
     @Override

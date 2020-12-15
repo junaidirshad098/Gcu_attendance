@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:background="#00FFFFFF"
-    android:gravity="center"
+
     android:id="@+id/card_design"
     android:layout_height="wrap_content"
 
@@ -12,14 +12,15 @@
 
     <androidx.cardview.widget.CardView
 
-        android:theme="@style/Theme.App"
+      android:theme="@style/customcard"
         android:id="@+id/subject_design1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="190dp"
+        android:layout_height="250dp"
+app:cardBackgroundColor="@color/colorPrimary"
+        app:cardElevation="5dp"
 
-        app:cardElevation="24dp"
         app:cardCornerRadius="8dp"
-android:fadingEdgeLength="22dp"
+        android:fadingEdgeLength="22dp"
         android:layout_marginTop="12dp"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
@@ -73,6 +74,7 @@ android:fadingEdgeLength="22dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="sans-serif-light"
                     android:text="@string/Section"
+                    android:textStyle="bold"
                     android:textAppearance="?attr/textAppearanceBody2"
                     android:textColor="?android:textColorSecondary" />
 
@@ -84,7 +86,8 @@ android:fadingEdgeLength="22dp"
                     android:fontFamily="sans-serif-light"
 
                     android:text="@string/supporting_text"
-
+                    android:maxLines="3"
+                    android:ellipsize="end"
                     android:textAppearance="?attr/textAppearanceBody2"
                     android:textColor="?android:textColorSecondary" />
 

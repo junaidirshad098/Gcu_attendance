@@ -61,7 +61,7 @@ subject_list.setAdapter(subjectCustomadapter);
 
         final View view = getLayoutInflater().inflate(R.layout.sheet_list, null);
 
-        ((View) view.findViewById(R.id.lyt_preview)).setOnClickListener(new View.OnClickListener() {
+        ((View) view.findViewById(R.id.lyt_preview03)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "Preview '"  + "' clicked", Toast.LENGTH_SHORT).show();

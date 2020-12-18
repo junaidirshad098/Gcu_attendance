@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -120,7 +121,7 @@ btn_create_team=root.findViewById(R.id.button_create_team);
 
         final View view = getLayoutInflater().inflate(R.layout.sheet_list, null);
 
-        ((View) view.findViewById(R.id.lyt_preview)).setOnClickListener(new View.OnClickListener() {
+        ((View) view.findViewById(R.id.lyt_preview03)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getContext(), "Preview '" + "' clicked", Toast.LENGTH_SHORT).show();
@@ -155,10 +156,10 @@ context.startActivity(intent);
 //
 //        startActivity(intent);
 
-        subjectArrayList.add(new Subject("Physics","A","Ali","kahsk"));
-        subjectCustomadapter.notifyDataSetChanged();
-        Log.d("name",subjectArrayList.get(1).getTeacher_name());
-        Log.d("size", String.valueOf(subjectArrayList.size()));
+//        subjectArrayList.add(new Subject("Physics","A","Ali","kahsk"));
+//        subjectCustomadapter.notifyDataSetChanged();
+//        Log.d("name",subjectArrayList.get(1).getTeacher_name());
+//        Log.d("size", String.valueOf(subjectArrayList.size()));
         showBottomSheetDialogCreateteam();
     }
 
@@ -169,8 +170,11 @@ context.startActivity(intent);
 //        }
 
         final View view = getLayoutInflater().inflate(R.layout.fragment_bottom_sheet_dialog_full, null);
-
-        ((View) view.findViewById(R.id.name)).setOnClickListener(new View.OnClickListener() {
+        ImageButton btn_close=view.findViewById(R.id.bt_close);
+        final EditText edt_sub_name=view.findViewById(R.id.bts_sub_name);
+        final EditText edt_sec_name=view.findViewById(R.id.bts_sec_name);
+        final EditText edt_sub_desc=view.findViewById(R.id.bts_sub_desc);
+        edt_sub_name.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getContext(), "Full" + " clicked", Toast.LENGTH_SHORT).show();
@@ -183,6 +187,11 @@ context.startActivity(intent);
             public void onClick(View view) {
                 Toast.makeText(getContext(), "Checked '" + "' clicked", Toast.LENGTH_SHORT).show();
 //                mBottomSheetDialog.cancel();
+                Subject sbobj=new Subject(edt_sub_name.getText().toString(),edt_sec_name.getText().toString(),"Mr Hafeez",edt_sub_desc.getText().toString());
+
+//                subjectArrayList.add(new Subject("Physics","A","Ali","kahsk"));
+subjectArrayList.add(sbobj);
+                subjectCustomadapter.notifyDataSetChanged();
                 mBottomSheetDialog.dismiss();
 //                mBottomSheetDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
 //                    @Override
@@ -192,6 +201,12 @@ context.startActivity(intent);
 //                });
             }
         });
+       btn_close.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               mBottomSheetDialog.dismiss();
+           }
+       });
         mBottomSheetDialog = new BottomSheetDialog(context);
         mBottomSheetDialog.setContentView(view);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

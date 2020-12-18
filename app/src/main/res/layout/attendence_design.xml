@@ -14,7 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-
         android:layout_marginBottom="8dp"
         >
 
@@ -75,4 +74,5 @@
             app:layout_constraintHorizontal_weight="0.5"
             app:layout_constraintStart_toEndOf="@+id/textstd_roll_no" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </LinearLayout>

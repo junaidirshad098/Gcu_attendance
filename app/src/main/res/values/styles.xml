@@ -67,4 +67,25 @@
     <style name="RippleStyleBlack" parent="RippleStyleWhite">
         <item name="mrl_rippleColor">#8096989A</item>
     </style>
+
+
+
+    <style name="textsmall" >
+        <item name="android:textColor">@color/grey_40</item>
+<item name="android:textSize">14dp</item>
+
+    </style>
+
+    <style name="t22">
+        <item name="android:textAppearance">@color/grey_90</item>
+    </style>
+
+    <style name="bts_full_menu_style">
+        <item name="android:layout_width">?attr/actionBarSize</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:padding">@dimen/spacing_large</item>
+    </style>
+
 </resources>
